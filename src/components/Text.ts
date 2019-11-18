@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
 const Text = styled.span`
-  color: ${p => p.theme[p.color]};
+  color: ${p => p.theme[p.color] || p.color};
 
   font-family: ${p => p.theme.font};
   font-size: ${p => p.size}rem;
