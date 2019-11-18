@@ -1,33 +1,43 @@
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
+
+const borderedStyles = css`
+  border-bottom: 1px solid ${p => p.theme.black4};
+`
 
 const Card = styled.div`
   width: 100%;
 
   background-color: white;
-  border-radius: 3px;
-  box-shadow: ${p => p.theme.shadows.lifted};
+  border: 1px solid ${p => p.theme.black8};
+  border-radius: 0.375rem;
+  box-shadow: ${p => p.theme.shadows.cardShadow};
 `
 
-interface ISectionProps {
-  padBottom?: boolean
-  padTop?: boolean
-}
+export const Body = styled.div`
+  padding: 1.5rem;
 
-export const Section = styled.div<ISectionProps>`
-  padding: 1rem;
-  padding-bottom: ${p => p.padBottom ? 1 : 0.5}rem;
-  padding-top: ${p => p.padTop ? 1 : 0.5}rem;
+  background-color: ${p => p.theme[p.bgColor]};
 
-  @media (${p => p.theme.screens.tablet}) {
-    padding: 1.5rem;
-    padding-bottom: ${p => p.padBottom ? 1.5 : 0.5}rem;
-    padding-top: ${p => p.padTop ? 1.5 : 0.5}rem;
+  &:last-child {
+    border-radius: 0 0 0.375rem 0.375rem;
   }
 `
 
-Section.defaultProps = {
-  padBottom: false,
-  padTop: false
+Body.defaultProps = {
+  bgColor: 'white'
+}
+
+export const Header = styled.div`
+  padding: 1.25rem 1.5rem;
+
+  background-color: white;
+  border-radius: 0.375rem 0.375rem 0 0;
+
+  ${p => !p.unbordered && borderedStyles};
+`
+
+Header.defaultProps = {
+  unbordered: false
 }
 
 export default Card

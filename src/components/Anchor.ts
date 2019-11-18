@@ -15,8 +15,8 @@ const Anchor = styled.a.attrs({
 `
 
 Anchor.defaultProps = {
-  color: 'secondary500',
-  hoverColor: 'secondary600'
+  color: 'primary700',
+  hoverColor: 'primary700'
 }
 
 export default Anchor
