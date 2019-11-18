@@ -6,39 +6,24 @@ const blockStyles = css`
   width: 100%;
 `
 
-const largeStyles = css`
-  padding: 1rem 1.5rem;
-  font-size: 1rem;
-`
-
 const smallStyles = css`
-  padding: 0.5rem 0.75rem;
+  padding: 0.25rem 0.5rem;
   font-size: 0.75rem;
 
   ${Icon} {
-    margin-right: 0.675rem;
+    margin-right: 0.375rem;
   }
 `
 
-interface IButtonProps {
-  bgColor?: string
-  block?: boolean
-  color?: string
-  disabledColor?: string
-  hoverColor?: string
-  large?: boolean
-  small?: boolean
-}
-
-const Button = styled.button<IButtonProps>`
+const Button = styled.button`
   align-items: center;
   display: inline-flex;
   justify-content: center;
-  padding: 0.625rem 1.125rem;
+  padding: 0.625rem 1.25rem;
 
   background-color: ${p => p.theme[p.bgColor]};
   border: 1px solid transparent;
-  border-radius: 3px;
+  border-radius: 0.375rem;
   color: ${p => p.theme[p.color]};
   cursor: pointer;
   outline: none;
@@ -51,12 +36,11 @@ const Button = styled.button<IButtonProps>`
   text-decoration: none;
 
   &:focus {
-    box-shadow: 0 0 1px 4px ${p => p.theme.primary100};
+    background-color: ${p => p.theme[p.activeColor]};
   }
 
   &:hover {
-    background-color: ${p => p.theme[p.hoverColor]};
-    color: ${p => p.theme[p.color]};
+    box-shadow: ${p => p.theme.shadows.raisedMore};
   }
 
   &[disabled] {
@@ -69,15 +53,14 @@ const Button = styled.button<IButtonProps>`
   }
 
   ${p => p.block && blockStyles};
-  ${p => p.large && largeStyles};
   ${p => p.small && smallStyles};
 `
 
 Button.defaultProps = {
-  bgColor: 'primary700',
+  activeColor: 'primary600',
+  bgColor: 'primary500',
   color: 'white',
   disabledColor: 'primary300',
-  hoverColor: 'primary800',
   type: 'button'
 }
 
