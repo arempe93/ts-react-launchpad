@@ -4,7 +4,6 @@ const Input = styled.input`
   height: 2.875rem;
   padding: 0.625rem 0.75rem;
   width: 100%;
-  max-width: 400px;
 
   background-color: white;
   border: 1px solid ${p => p.theme.black4};
@@ -23,7 +22,7 @@ const Input = styled.input`
   }
 
   &::-webkit-input-placeholder {
-    color: ${p => p.theme.black32};
+    color: ${p => p.theme.grey500};
   }
 `
 

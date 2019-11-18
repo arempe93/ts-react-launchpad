@@ -6,7 +6,7 @@ const TextArea = styled(Input).attrs({
   as: 'textarea',
   rows: 3
 })`
-  line-height: 1.5;
+  padding-top: 0.75rem;
 `
 
 export default TextArea

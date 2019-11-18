@@ -3,11 +3,14 @@ import styled from 'styled-components'
 import Input from '@/components/Input'
 
 const Select = styled(Input)`
-  -webkit-appearance: none;
-  -moz-appearance: none;
+  appearance: none;
   background-color: white;
 
   cursor: pointer;
+
+  option:disabled {
+    color: ${p => p.theme.grey500};
+  }
 `
 
 Select.defaultProps = {
