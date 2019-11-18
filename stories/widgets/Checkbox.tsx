@@ -4,13 +4,13 @@ import { storiesOf } from '@storybook/react'
 
 import Checkbox from '@/widgets/Checkbox'
 
-import Center from '../Center'
+import Padding from '../Padding'
 
 storiesOf('widgets/Checkbox', module)
   .add('default', () => (
-    <Center>
+    <Padding>
       <Checkbox>
         Remember me
       </Checkbox>
-    </Center>
+    </Padding>
   ))

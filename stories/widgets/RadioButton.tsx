@@ -4,13 +4,13 @@ import { storiesOf } from '@storybook/react'
 
 import RadioButton from '@/widgets/RadioButton'
 
-import Center from '../Center'
+import Padding from '../Padding'
 
 storiesOf('widgets/RadioButton', module)
   .add('default', () => (
-    <Center>
+    <Padding>
       <RadioButton>
         Remember me
       </RadioButton>
-    </Center>
+    </Padding>
   ))
