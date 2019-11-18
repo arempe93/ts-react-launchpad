@@ -42,6 +42,7 @@ export const warn700 = '#B78600'
 export const warn800 = '#936900'
 export const warn900 = '#7A5400'
 
+export const grey25 = '#F7FAFC'
 export const grey50 = '#F6F9FC'
 export const grey100 = '#F4F5F7'
 export const grey200 = '#E9ECEF'

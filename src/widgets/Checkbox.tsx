@@ -8,18 +8,19 @@ const Box = styled.div`
 
   position: relative;
 
-  border: 2px solid ${p => p.theme.black8};
-  border-radius: 3px;
+  background-color: white;
+  border-radius: 0.25rem;
+  box-shadow: ${p => p.theme.shadows.raised};
 
   &::after {
     content: "";
     display: block;
     height: 0.25rem;
-    width: 0.675rem;
+    width: 0.5rem;
 
-    left: 2px;
+    left: 5px;
     position: absolute;
-    top: 3px;
+    top: 5px;
 
     border: 1px solid white;
     border-width: 0 0 2px 2px;
@@ -54,6 +55,7 @@ const Wrapper = styled.label`
   cursor: pointer;
 
   font-size: 0.875rem;
+  line-height: 1.5;
 
   > input {
     height: 0;
