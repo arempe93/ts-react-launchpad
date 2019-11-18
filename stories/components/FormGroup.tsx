@@ -5,11 +5,11 @@ import { storiesOf } from '@storybook/react'
 import FormGroup, { Label } from '@/components/FormGroup'
 import Input from '@/components/Input'
 
-import Padding from '../Padding'
+import Center from '../Center'
 
 storiesOf('components/FormGroup', module)
   .add('default', () => (
-    <Padding>
+    <Center>
       <FormGroup>
         <Label>
           Email
@@ -20,7 +20,10 @@ storiesOf('components/FormGroup', module)
         <Label>
           Password
         </Label>
-        <Input placeholder='Password' />
+        <Input
+          placeholder='Password'
+          type='password'
+        />
       </FormGroup>
-    </Padding>
+    </Center>
   ))

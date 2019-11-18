@@ -4,11 +4,13 @@ import { storiesOf } from '@storybook/react'
 
 import TextArea from '@/components/TextArea'
 
-import Padding from '../Padding'
+import Center from '../Center'
 
 storiesOf('components/TextArea', module)
   .add('default', () => (
-    <Padding>
-      <TextArea placeholder='Write something long...' />
-    </Padding>
+    <Center>
+      <TextArea
+        placeholder='Write something long...'
+      />
+    </Center>
   ))

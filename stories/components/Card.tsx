@@ -5,11 +5,11 @@ import { storiesOf } from '@storybook/react'
 import Card, { Body, Header } from '@/components/Card'
 import Text from '@/components/Text'
 
-import Padding from '../Padding'
+import Center from '../Center'
 
 storiesOf('components/Card', module)
   .add('default', () => (
-    <Padding>
+    <Center width={40}>
       <Card>
         <Header>
           <Text color='grey800' lineHeight={1.5} size={1.125} weight={600}>
@@ -20,10 +20,10 @@ storiesOf('components/Card', module)
           Card body
         </Body>
       </Card>
-    </Padding>
+    </Center>
   ))
   .add('bgColor', () => (
-    <Padding>
+    <Center width={40}>
       <Card>
         <Header>
           <Text color='grey800' lineHeight={1.5} size={1.125} weight={600}>
@@ -34,5 +34,5 @@ storiesOf('components/Card', module)
           Card body
         </Body>
       </Card>
-    </Padding>
+    </Center>
   ))

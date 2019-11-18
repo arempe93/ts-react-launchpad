@@ -19,7 +19,7 @@ const rowStyles = css`
 `
 
 const ActionRow = styled.div`
-  align-items: center;
+  align-items: ${p => p.align};
   display: flex;
   justify-content: ${p => p.justify};
   flex-direction: ${p => p.direction};
@@ -30,6 +30,7 @@ const ActionRow = styled.div`
 `
 
 ActionRow.defaultProps = {
+  align: 'center',
   direction: 'row',
   gutter: 1,
   justify: 'flex-start'

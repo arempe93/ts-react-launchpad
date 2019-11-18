@@ -6,6 +6,7 @@ import ActionRow from '@/components/ActionRow'
 import Button from '@/components/Button'
 import Icon from '@/components/Icon'
 
+import Center from '../Center'
 import Padding from '../Padding'
 
 storiesOf('components/Button', module)
@@ -97,7 +98,7 @@ storiesOf('components/Button', module)
     </Padding>
   ))
   .add('block', () => (
-    <Padding>
+    <Center>
       <ActionRow direction='column'>
         <Button block>
           Testing
@@ -125,7 +126,7 @@ storiesOf('components/Button', module)
           Something
         </Button>
       </ActionRow>
-    </Padding>
+    </Center>
   ))
   .add('with icon', () => (
     <Padding>

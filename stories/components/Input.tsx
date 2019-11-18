@@ -4,11 +4,11 @@ import { storiesOf } from '@storybook/react'
 
 import Input from '@/components/Input'
 
-import Padding from '../Padding'
+import Center from '../Center'
 
 storiesOf('components/Input', module)
   .add('default', () => (
-    <Padding>
+    <Center>
       <Input placeholder='Type something...' />
-    </Padding>
+    </Center>
   ))

@@ -4,6 +4,8 @@ import Icon from '@/components/Icon'
 
 const blockStyles = css`
   width: 100%;
+
+  line-height: 1.75;
 `
 
 const smallStyles = css`
@@ -32,7 +34,7 @@ const Button = styled.button`
   font-family: ${p => p.theme.fontsans};
   font-size: 0.875rem;
   font-weight: 600;
-  line-height: 1;
+  line-height: 1.25;
   text-decoration: none;
 
   &:focus {
