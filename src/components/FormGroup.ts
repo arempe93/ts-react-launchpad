@@ -6,21 +6,17 @@ const FormGroup = styled.div`
   margin-bottom: 1.5rem;
 `
 
-interface ILabelProps {
-  as?: string,
-  color?: string,
-  size?: number
-}
-
-export const Label = styled(Text)<ILabelProps>`
+export const Label = styled(Text)`
   display: block;
   margin-bottom: 0.5rem;
+  margin-left: 0.375rem;
 `
 
 Label.defaultProps = {
   as: 'label',
-  color: 'black64',
-  size: 0.75
+  color: 'grey800',
+  size: 0.75,
+  weight: 600
 }
 
 export default FormGroup
