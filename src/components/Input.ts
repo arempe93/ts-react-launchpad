@@ -1,21 +1,25 @@
 import styled from 'styled-components'
 
 const Input = styled.input`
-  padding: 0.625rem 1.125rem;
+  height: 2.875rem;
+  padding: 0.625rem 0.75rem;
   width: 100%;
+  max-width: 400px;
 
   background-color: white;
-  border: 1px solid ${p => p.theme.black8};
-  border-radius: 3px;
+  border: 1px solid ${p => p.theme.black4};
+  border-radius: ${p => p.theme.sizes.borderRadius}rem;
+  box-shadow: ${p => p.theme.shadows.raised};
   outline: none;
 
   font-family: ${p => p.theme.font};
   font-size: 0.875rem;
-  line-height: 1;
+  line-height: 1.5;
+
+  transition: box-shadow 150ms ease;
 
   &:focus {
-    border-color: ${p => p.theme.black88};
-    outline: 1px solid ${p => p.theme.black88};
+    box-shadow: ${p => p.theme.shadows.raisedMore};
   }
 
   &::-webkit-input-placeholder {
