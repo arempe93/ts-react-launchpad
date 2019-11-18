@@ -1,30 +1,61 @@
-export const primary100 = '#d4bff9'
-export const primary200 = '#b794f6'
-export const primary300 = '#9965f4'
-export const primary400 = '#7e3ff2'
-export const primary500 = '#6002ee'
-export const primary600 = '#5300e8'
-export const primary700 = '#3d00e0'
-export const primary900 = '#0000d6'
+// ##############################################
+// ##  Brand
+// ##############################################
 
-export const secondary300 = '#6dbeff'
-export const secondary400 = '#50aeff'
-export const secondary500 = '#378ff6'
-export const secondary600 = '#3781e8'
+export const primary100 = '#DFE6FD'
+export const primary200 = '#C0CCFC'
+export const primary300 = '#9FAFF6'
+export const primary400 = '#8596EE'
+export const primary500 = '#5E72E4'
+export const primary600 = '#4455C4'
+export const primary700 = '#2F3DA4'
+export const primary800 = '#1D2884'
+export const primary900 = '#12196D'
 
-export const red100 = '#f9cec3'
-export const red300 = '#f49078'
-export const red400 = '#f3795b'
-export const red500 = '#f36342'
-export const red600 = '#e85d3e'
+export const success100 = '#F4FCCD'
+export const success200 = '#E7F99C'
+export const success300 = '#D0ED68'
+export const success400 = '#B5DC42'
+export const success500 = '#92C60D'
+export const success600 = '#78AA09'
+export const success700 = '#608E06'
+export const success800 = '#4A7204'
+export const success900 = '#3A5F02'
 
-export const green100 = '#defabb'
-export const green300 = '#aaf255'
-export const green500 = '#75e900'
-export const green600 = '#61d800'
-export const green700 = '#41c300'
-export const green800 = '#09af00'
-export const green900 = '#008b00'
+export const danger100 = '#FFE7D7'
+export const danger200 = '#FFC9B0'
+export const danger300 = '#FFA488'
+export const danger400 = '#FF816B'
+export const danger500 = '#FF473A'
+export const danger600 = '#DB2A2D'
+export const danger700 = '#B71D2C'
+export const danger800 = '#93122A'
+export const danger900 = '#7A0B28'
+
+export const warn100 = '#FFF8CC'
+export const warn200 = '#FFEF99'
+export const warn300 = '#FFE466'
+export const warn400 = '#FFD93F'
+export const warn500 = '#FFC700'
+export const warn600 = '#DBA600'
+export const warn700 = '#B78600'
+export const warn800 = '#936900'
+export const warn900 = '#7A5400'
+
+export const grey50 = '#F6F9FC'
+export const grey100 = '#F4F5F7'
+export const grey200 = '#E9ECEF'
+export const grey300 = '#DEE2E6'
+export const grey400 = '#CED4DA'
+export const grey500 = '#ADB5BD'
+export const grey600 = '#8898AA'
+export const grey700 = '#525f7f'
+export const grey800 = '#32325d'
+export const grey900 = '#212529'
+
+// ##############################################
+// ##  Basics
+// ##############################################
 
 export const black = 'black'
 export const black88 = 'rgba(0,0,0,0.88)'
@@ -38,6 +69,8 @@ export const black8 = 'rgba(0,0,0,0.08)'
 export const black4 = 'rgba(0,0,0,0.04)'
 export const black2 = 'rgba(0,0,0,0.02)'
 
+export const transparent = 'transparent'
+
 export const white = 'white'
 export const white88 = 'rgba(255,255,255,0.88)'
 export const white72 = 'rgba(255,255,255,0.72)'
@@ -49,11 +82,3 @@ export const white16 = 'rgba(255,255,255,0.16)'
 export const white8 = 'rgba(255,255,255,0.08)'
 export const white4 = 'rgba(255,255,255,0.04)'
 export const white2 = 'rgba(255,255,255,0.02)'
-
-export const deepCove = '#130f40'
-
-export const lightGray = '#f5f7f9'
-
-export const background = lightGray
-
-export const transparent = 'transparent'

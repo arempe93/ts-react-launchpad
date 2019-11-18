@@ -11,8 +11,8 @@ const GlobalStyle = createGlobalStyle`
     min-height: 100%;
     width: 100vw;
 
-    font-size: 16px;
-    line-height: 1.5;
+    font-size: 1rem;
+    line-height: 1.15;
   }
 
   body {
