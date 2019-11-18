@@ -10,10 +10,10 @@ const clickableStyles = css`
   cursor: pointer;
 
   &:hover {
-    background-color: ${p => p.active ? p.theme.catskillWhite : p.theme.black2};
+    background-color: ${p => p.active ? p.theme.primary100 : p.theme.grey100};
 
     ${Cell} {
-      border-top: 1px solid ${p => p.theme.black2};
+      border-top-color: transparent;
     }
   }
 `
@@ -38,10 +38,6 @@ const Row = styled.tr`
     ${Cell} {
       border-color: transparent;
     }
-  }
-
-  &:nth-child(2n) {
-    background-color: ${p => p.theme.black2};
   }
 `
 

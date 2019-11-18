@@ -8,13 +8,13 @@ const narrowStyles = css`
 
 const Cell = styled.td`
   padding: 1rem;
+  width: ${p => p.width ? p.width : 'auto'};
 
   border-top: 1px solid ${p => p.theme.black4};
 
-  line-height: 1.42857;
-
-  width: ${p => p.width ? p.width : 'auto'};
+  font-size: 0.875rem;
   text-align: ${p => p.right ? 'right' : 'left'};
+  line-height: 1.5;
   vertical-align: middle;
 
   &:first-child {

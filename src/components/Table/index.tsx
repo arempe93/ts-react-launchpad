@@ -7,7 +7,7 @@ import Row from './Row'
 import SortableHeading from './SortableHeading'
 
 const Table = styled.table`
-  margin-bottom: 1.5rem;
+  margin-bottom: 0.125rem;
   width: 100%;
 
   border-collapse: collapse;
