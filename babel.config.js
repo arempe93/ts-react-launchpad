@@ -3,7 +3,7 @@ module.exports = function (api) {
   const presets = [
     ['@babel/react'],
     ['@babel/typescript'],
-    ['@babel/env', { modules: false }]
+    ['@babel/env', { modules: false, useBuiltIns: 'usage', corejs: { version: 3, proposals: true } }]
   ]
 
   const plugins = [
