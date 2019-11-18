@@ -4,6 +4,7 @@ import Transition from 'react-transition-group/Transition'
 import styled from 'styled-components'
 
 import Icon from '@/components/Icon'
+import Snackbar from '@/components/Snackbar'
 import Text from '@/components/Text'
 
 import Portal from '@/widgets/Portal'
@@ -115,20 +116,14 @@ class SnackbarRoot extends Component {
               refProp='innerRef'
               onClickOut={this.handleClickOut}
             >
-              <Wrapper
+              <Snackbar
                 role='alert'
                 style={{ ...defaultStyle, ...transitionStyles[state] }}
                 type={this.props.type}
               >
-                <IconWrapper type={this.props.type}>
-                  <Icon name={ICONS[this.props.type]} />
-                </IconWrapper>
-                <Content>
-                  <Text>
-                    {this.props.message}
-                  </Text>
-                </Content>
-              </Wrapper>
+                <Icon name={ICONS[this.props.type]} />
+                {this.props.message}
+              </Snackbar>
             </ClickOutHandler>
           </Portal>
         )}
