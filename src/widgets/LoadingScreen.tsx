@@ -11,7 +11,7 @@ const Wrapper = styled.div`
 
   bottom: 0;
   left: 0;
-  position: fixed;
+  position: absolute;
   top: 0;
   right: 0;
 
@@ -24,30 +24,31 @@ const Inner = styled.div`
   flex-direction: column;
   justify-content: center;
 
-  > ${Icon} {
-    font-size: 4rem;
-  }
-
-  > ${Text} {
+  > ${Text} + ${Text} {
     margin-top: 1.5rem;
   }
 `
 
-const LoadingScreen = ({ name, prompt, ...rest }) => (
+const LoadingScreen = ({ color, iconColor, name, prompt, ...rest }) => (
   <Wrapper {...rest}>
     <Inner>
-      <Icon spin name={name} />
-      <Text>
-        {prompt}
+      <Text color={iconColor} size={4}>
+        <Icon spin name={name} />
       </Text>
+      {prompt &&
+        <Text color={color}>
+          {prompt}
+        </Text>
+      }
     </Inner>
   </Wrapper>
 )
 
 LoadingScreen.defaultProps = {
   bgColor: 'transparent',
-  name: 'circle-notch',
-  prompt: 'Loading...'
+  color: 'grey700',
+  iconColor: 'grey800',
+  name: 'circle-notch'
 }
 
 export default LoadingScreen

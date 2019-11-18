@@ -16,6 +16,8 @@ const Card = styled.div`
 export const Body = styled.div`
   padding: 1.5rem;
 
+  position: relative;
+
   background-color: ${p => p.theme[p.bgColor]};
 
   &:last-child {
