@@ -70,8 +70,6 @@ export const black8 = 'rgba(0,0,0,0.08)'
 export const black4 = 'rgba(0,0,0,0.04)'
 export const black2 = 'rgba(0,0,0,0.02)'
 
-export const transparent = 'transparent'
-
 export const white = 'white'
 export const white88 = 'rgba(255,255,255,0.88)'
 export const white72 = 'rgba(255,255,255,0.72)'
@@ -90,3 +88,5 @@ export const white2 = 'rgba(255,255,255,0.02)'
 
 export const backgroundGrey = '#F8F9FE'
 export const hoverGrey = grey50
+
+export const transparent = 'transparent'

@@ -18,7 +18,7 @@ const Inner = styled.div`
   width: 100%;
 `
 
-const PageWrapper = ({ children, full, width }) => {
+const Content = ({ children, full, width }) => {
   if (full) {
     return (
       <Wrapper>
@@ -36,9 +36,9 @@ const PageWrapper = ({ children, full, width }) => {
   )
 }
 
-PageWrapper.defaultProps = {
+Content.defaultProps = {
   bgColor: 'transparent',
   width: 68
 }
 
-export default PageWrapper
+export default Content

@@ -14,7 +14,7 @@ import Text from '@/components/Text'
 
 import Checkbox from '@/widgets/Checkbox'
 
-import PageWrapper from '@/widgets/PageWrapper'
+import Content from '@/widgets/Content'
 
 const HeadingText = styled.div`
   margin-bottom: 4rem;
@@ -28,7 +28,7 @@ storiesOf('components/BackgroundHeader', module)
   .add('default', () => (
     <>
       <BackgroundHeader>
-        <PageWrapper>
+        <Content>
           <HeadingText>
             <ActionRow full justify='center'>
               <Text color='white' size={2} weight={700}>
@@ -36,9 +36,9 @@ storiesOf('components/BackgroundHeader', module)
               </Text>
             </ActionRow>
           </HeadingText>
-        </PageWrapper>
+        </Content>
       </BackgroundHeader>
-      <PageWrapper width={28}>
+      <Content width={28}>
         <Card>
           <LoginBody bgColor='grey25'>
             <FormGroup>
@@ -84,6 +84,6 @@ storiesOf('components/BackgroundHeader', module)
             </ActionRow>
           </LoginBody>
         </Card>
-      </PageWrapper>
+      </Content>
     </>
   ))

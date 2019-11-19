@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-const BackgroundHeader = styled.div`
+const BackgroundHeader = styled.header`
   align-items: center;
   display: flex;
   padding: 8rem 0 8rem;
