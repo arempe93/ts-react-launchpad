@@ -83,3 +83,9 @@ export const white16 = 'rgba(255,255,255,0.16)'
 export const white8 = 'rgba(255,255,255,0.08)'
 export const white4 = 'rgba(255,255,255,0.04)'
 export const white2 = 'rgba(255,255,255,0.02)'
+
+// ##############################################
+// ##  Special
+// ##############################################
+
+export const hoverGrey = grey50

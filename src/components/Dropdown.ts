@@ -6,16 +6,28 @@ const Dropdown = styled.ul`
   display: flex;
   flex-direction: column;
 
-  background-color: ${p => p.theme.black72};
-  border-radius: 3px;
-  box-shadow: ${p => p.theme.shadows.robinHood};
+  background-color: white;
+  border-radius: 0.375rem;
+  box-shadow: ${p => p.theme.shadows.dropdownShadow};
+
+  z-index: 100;
 `
 
 export const Group = styled.div`
   display: flex;
   flex-direction: column;
 
-  border-top: 1px solid ${p => p.theme.black24};
+  border-top: 1px solid ${p => p.theme.black8};
+
+  &:first-child {
+    border-top-left-radius: 0.375rem;
+    border-top-right-radius: 0.375rem;
+  }
+
+  &:last-child {
+    border-bottom-left-radius: 0.375rem;
+    border-bottom-right-radius: 0.375rem;
+  }
 `
 
 const activeStyles = css`
@@ -31,17 +43,16 @@ export const Item = styled.li`
   height: 3rem;
   padding: 0 1.5rem;
 
-  color: white;
   cursor: pointer;
 
   &:first-child {
-    border-top-left-radius: 3px;
-    border-top-right-radius: 3px;
+    border-top-left-radius: 0.375rem;
+    border-top-right-radius: 0.375rem;
   }
 
   &:last-child {
-    border-bottom-left-radius: 3px;
-    border-bottom-right-radius: 3px;
+    border-bottom-left-radius: 0.375rem;
+    border-bottom-right-radius: 0.375rem;
   }
 
   &:hover, &:focus {
@@ -60,7 +71,7 @@ export const Item = styled.li`
 
 Item.defaultProps = {
   active: false,
-  hoverColor: 'black16',
+  hoverColor: 'hoverGrey',
   tabIndex: 0
 }
 

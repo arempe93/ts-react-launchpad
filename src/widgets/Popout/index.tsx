@@ -11,10 +11,8 @@ const Wrapper = styled.div`
   max-height: 50vh;
   max-width: 30rem;
   min-width: 16rem;
-  overflow-y: auto;
 
   background-clip: padding-box;
-  background-color: white;
   border: 1px solid #f4f4f5;
   box-shadow: ${p => p.theme.shadows.robinHood};
 `
