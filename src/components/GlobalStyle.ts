@@ -20,7 +20,7 @@ const GlobalStyle = createGlobalStyle`
     margin: 0;
     overflow-y: auto;
 
-    background-color: ${p => p.theme.grey100};
+    background-color: ${p => p.theme.backgroundGrey};
     color: ${p => p.theme.grey700};
 
     -webkit-font-smoothing: antialiased;
