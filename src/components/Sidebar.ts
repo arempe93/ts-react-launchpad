@@ -31,6 +31,7 @@ export const Item = styled.div`
 
   ${Icon} {
     margin-right: 1.25rem;
+    width: 1.25rem;
 
     color: ${p => p.theme.grey500};
   }

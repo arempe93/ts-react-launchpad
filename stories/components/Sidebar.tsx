@@ -25,7 +25,7 @@ storiesOf('components/Sidebar', module)
             Sales
           </Item>
           <Item active>
-            <Icon name='image' />
+            <Icon name='images' />
             Image Gallery
           </Item>
           <Item>
