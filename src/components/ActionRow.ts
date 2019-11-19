@@ -12,6 +12,11 @@ const fitStyles = css`
   }
 `
 
+const fullStyles = css`
+  flex: 1;
+  width: 100%;
+`
+
 const rowStyles = css`
   > * + * {
     margin-left: ${p => p.gutter}rem;
@@ -26,7 +31,8 @@ const ActionRow = styled.div`
 
   ${p => (p.direction === 'column' || p.direction === 'column-reverse') && columnStyles};
   ${p => (p.direction === 'row' || p.direction === 'row-reverse') && rowStyles};
-  ${p => p.fit && fitStyles}
+  ${p => p.fit && fitStyles};
+  ${p => p.full && fullStyles};
 `
 
 ActionRow.defaultProps = {

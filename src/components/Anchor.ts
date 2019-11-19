@@ -1,10 +1,11 @@
 import styled from 'styled-components'
 
-const Anchor = styled.a.attrs({
+import Text from '@/components/Text'
+
+const Anchor = styled(Text).attrs({
+  as: 'a',
   rel: 'noopenner noreferrer'
 })`
-  color: ${p => p.theme[p.color]};
-
   &:visited {
     color: ${p => p.theme[p.color]};
   }
