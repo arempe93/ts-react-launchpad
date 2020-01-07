@@ -1,30 +1,32 @@
 import React from 'react'
 
-import ActionRow from '@/components/ActionRow'
-import Card, { Section } from '@/components/Card'
+import Card, { Body, Header } from '@/components/Card'
 import Icon from '@/components/Icon'
 import IconButton from '@/components/IconButton'
 import Text from '@/components/Text'
 
-import { hide } from '@/state/modal'
+interface Props {
+  title: string,
+  onClose: () => void
+}
 
-const Modal = ({ children, title }) => (
+const Modal: React.FC<Props> = ({ children, title, onClose }) => (
   <Card>
-    <Section padBottom padTop>
-      <ActionRow justify='space-between'>
-        <Text color='black88' weight={700}>
-          {title}
-        </Text>
-        <IconButton
-          circumference={2}
-          size={0.875}
-          onClick={hide}
-        >
-          <Icon name='times' />
-        </IconButton>
-      </ActionRow>
-    </Section>
-    {children}
+    <Header>
+      <Text color='grey900' weight={700}>
+        {title}
+      </Text>
+      <IconButton
+        padding={0.875}
+        size={0.875}
+        onClick={onClose}
+      >
+        <Icon name='times' />
+      </IconButton>
+    </Header>
+    <Body>
+      {children}
+    </Body>
   </Card>
 )
 

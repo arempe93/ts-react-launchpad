@@ -8,6 +8,17 @@ const blockStyles = css`
   line-height: 1.75;
 `
 
+const compactStyles = css`
+  padding: 0.375rem 0.875rem;
+
+  font-size: 0.875rem;
+  line-height: 1.15;
+
+  ${Icon} {
+    margin-right: 0.625rem;
+  }
+`
+
 const smallStyles = css`
   padding: 0.25rem 0.5rem;
   font-size: 0.75rem;
@@ -55,14 +66,15 @@ const Button = styled.button`
   }
 
   ${p => p.block && blockStyles};
+  ${p => p.compact && compactStyles};
   ${p => p.small && smallStyles};
 `
 
 Button.defaultProps = {
-  activeColor: 'primary600',
-  bgColor: 'primary500',
+  activeColor: 'primary700',
+  bgColor: 'primary600',
   color: 'white',
-  disabledColor: 'primary300',
+  disabledColor: 'primary400',
   type: 'button'
 }
 

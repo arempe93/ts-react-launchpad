@@ -1,3 +1,4 @@
+import { IconName } from '@fortawesome/fontawesome-svg-core'
 import React from 'react'
 import styled from 'styled-components'
 
@@ -29,11 +30,18 @@ const Inner = styled.div`
   }
 `
 
-const LoadingScreen = ({ color, iconColor, name, prompt, ...rest }) => (
+interface Props {
+  color: string
+  icon: IconName
+  iconColor: string
+  prompt: string
+}
+
+const LoadingScreen = ({ color, icon, iconColor, prompt, ...rest }: Props) => (
   <Wrapper {...rest}>
     <Inner>
       <Text color={iconColor} size={4}>
-        <Icon spin name={name} />
+        <Icon spin name={icon} />
       </Text>
       {prompt &&
         <Text color={color}>
@@ -47,8 +55,8 @@ const LoadingScreen = ({ color, iconColor, name, prompt, ...rest }) => (
 LoadingScreen.defaultProps = {
   bgColor: 'transparent',
   color: 'grey700',
-  iconColor: 'grey800',
-  name: 'circle-notch'
+  icon: 'circle-notch',
+  iconColor: 'grey800'
 }
 
 export default LoadingScreen

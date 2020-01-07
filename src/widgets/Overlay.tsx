@@ -1,37 +1,37 @@
 import React from 'react'
-import ClickoutHandler from 'react-clickout-handler'
 import styled from 'styled-components'
 
 const Wrapper = styled.div`
-  bottom: 0;
   display: flex;
   justify-content: center;
+
+  bottom: 0;
   left: 0;
-  padding: 4rem 1rem;
   position: fixed;
   right: 0;
   top: 0;
 
-  background-color: ${p => p.theme.black64};
-  overflow-y: auto;
-  z-index: ${p => p.theme.sizes.strata.modal};
+  background-color: ${p => p.theme.black48};
 
-  @media (${p => p.theme.screens.smallDesktop}) {
-    padding: 8rem 0;
-  }
+  z-index: ${p => p.theme.sizes.strata.modal};
 `
 
 const Inner = styled.div`
+  flex: 1;
   max-width: ${p => p.width}rem;
-  width: 100%;
+  padding: ${p => p.padding}rem 1rem 0;
+
+  overflow-y: auto;
+
+  & > *:last-child {
+    margin-bottom: ${p => p.padding}rem;
+  }
 `
 
-const Overlay = ({ children, innerWidth = 40, ...rest }) => (
+const Overlay = ({ children, padding = 8, width = 54 }) => (
   <Wrapper>
-    <Inner width={innerWidth}>
-      <ClickoutHandler events={['mousedown']} wrapWith='div' {...rest}>
-        {children}
-      </ClickoutHandler>
+    <Inner padding={padding} width={width}>
+      {children}
     </Inner>
   </Wrapper>
 )

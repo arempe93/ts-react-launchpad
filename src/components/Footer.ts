@@ -7,6 +7,8 @@ const Footer = styled.footer`
   padding: 2rem;
 
   background-color: ${p => p.theme[p.bgColor]};
+
+  font-size: 0.875rem;
 `
 
 Footer.defaultProps = {

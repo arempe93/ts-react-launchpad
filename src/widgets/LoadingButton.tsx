@@ -3,12 +3,15 @@ import React from 'react'
 import Button from '@/components/Button'
 import Icon from '@/components/Icon'
 
-const LoadingButton = ({ children, icon = 'circle-notch', isLoading, ...rest }) => (
+const LoadingButton = ({ children, icon = 'circle-notch', isLoading, prompt, ...rest }) => (
   <Button disabled={isLoading} {...rest}>
     {isLoading &&
       <Icon spin name={icon} />
     }
-    {children}
+    {isLoading
+      ? prompt || children
+      : children
+    }
   </Button>
 )
 

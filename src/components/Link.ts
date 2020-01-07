@@ -22,6 +22,7 @@ Link.defaultProps = {
   as: _Link,
   color: 'primary500',
   hoverColor: 'primary500',
+  lineHeight: 1.15,
   undecorated: false
 }
 

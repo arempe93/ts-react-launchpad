@@ -1,13 +1,15 @@
 import styled from 'styled-components'
 
+import Icon from '@/components/Icon'
+
 const IconButton = styled.button`
   align-items: center;
   display: flex;
+  height: ${p => p.width + p.padding}rem;
   justify-content: center;
-  height: ${p => p.circumference || p.size * 3}rem;
-  width: ${p => p.circumference || p.size * 3}rem;
+  width: ${p => p.width + p.padding}rem;
 
-  background-color: ${p => p.theme[p.bgColor]};
+  appearance: none;
   border: none;
   border-radius: 100%;
   color: ${p => p.theme[p.color]};
@@ -16,23 +18,26 @@ const IconButton = styled.button`
 
   font-size: ${p => p.size}rem;
 
+  ${Icon} {
+    width: ${p => p.width}rem;
+  }
+
   &:hover {
     background-color: ${p => p.theme[p.hoverColor]};
   }
 
-  &[disabled] {
-    color: ${p => p.theme[p.disabledColor]};
-    cursor: not-allowed;
+  &:active {
+    background-color: ${p => p.theme[p.activeColor]};
   }
 `
 
 IconButton.defaultProps = {
-  bgColor: 'transparent',
-  circumference: null,
-  color: 'black72',
-  disabledColor: 'black48',
-  hoverColor: 'black8',
-  size: 1
+  activeColor: 'grey200',
+  color: 'grey700',
+  hoverColor: 'hoverGrey',
+  padding: 1.5,
+  size: 1,
+  width: 1
 }
 
 export default IconButton

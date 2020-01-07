@@ -2,10 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 
 const Wrapper = styled.div`
-  flex: 1;
-  padding: 0 1rem;
-  padding-bottom: ${p => p.padBottom}rem;
-  padding-top: ${p => p.padTop}rem;
+  padding: 2rem 3rem;
 
   background-color: ${p => p.theme[p.bgColor]};
 `
@@ -16,33 +13,30 @@ const CenterWrapper = styled(Wrapper)`
 `
 
 const Inner = styled.div`
-  max-width: ${p => p.width}rem;
+  max-width: 68rem;
   width: 100%;
 `
 
-const Content = ({ children, full, width, ...rest }) => {
+const PageWrapper = ({ children, full, ...rest }) => {
   if (full) {
     return (
-      <Wrapper {...rest}>
+      <Wrapper>
         {children}
       </Wrapper>
     )
   }
 
   return (
-    <CenterWrapper {...rest}>
-      <Inner width={width}>
+    <CenterWrapper>
+      <Inner>
         {children}
       </Inner>
     </CenterWrapper>
   )
 }
 
-Content.defaultProps = {
-  bgColor: 'transparent',
-  padBottom: 0,
-  padTop: 0,
-  width: 72
+PageWrapper.defaultProps = {
+  bgColor: 'transparent'
 }
 
-export default Content
+export default PageWrapper

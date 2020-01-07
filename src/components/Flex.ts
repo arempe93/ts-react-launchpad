@@ -23,7 +23,7 @@ const rowStyles = css`
   }
 `
 
-const ActionRow = styled.div`
+const Flex = styled.div`
   align-items: ${p => p.align};
   display: flex;
   justify-content: ${p => p.justify};
@@ -35,11 +35,11 @@ const ActionRow = styled.div`
   ${p => p.full && fullStyles};
 `
 
-ActionRow.defaultProps = {
+Flex.defaultProps = {
   align: 'center',
   direction: 'row',
   gutter: 1,
   justify: 'flex-start'
 }
 
-export default ActionRow
+export default Flex
