@@ -3,15 +3,13 @@ import ClickOutHandler from 'react-clickout-handler'
 import Transition from 'react-transition-group/Transition'
 import styled from 'styled-components'
 
+import Alert from '@/components/Alert'
 import Icon from '@/components/Icon'
-import Snackbar from '@/components/Snackbar'
-import Text from '@/components/Text'
 
 import Portal from '@/widgets/Portal'
 
 import { withState } from '@/state'
-import { hide, selectIfVisible, selectMessage, selectType } from '@/state/snackbar'
-
+import { hide, selectIfVisible, selectMessage, selectOptions } from '@/state/snackbar'
 
 const ICONS = {
   success: 'check',
@@ -28,102 +26,57 @@ const defaultStyle = {
 }
 
 const transitionStyles = {
-  entering: { transform: 'translate3d(0,calc(100% + 80px),0)' },
-  entered: { transform: 'translate3d(0,0,0)' }
-}
-
-const getBackground = (p) => {
-  switch (p.type) {
-    case 'success':
-      return p.theme.green100
-    case 'warning':
-      return p.theme.blazeOrange
-    case 'error':
-      return p.theme.red100
-    case 'info':
-    default:
-      return p.theme.green100
-  }
+  entered: { transform: 'translate3d(0,0,0)' },
+  entering: { transform: 'translate3d(0,calc(100% + 80px),0)' }
 }
 
 const Wrapper = styled.div`
-  display: flex;
+  min-width: 24rem;
+
+  bottom: 2.5rem;
   position: fixed;
+  right: 2.5rem;
 
-  padding-left: 96px;
-
-  border-radius: 2px;
-
-  min-height: 64px;
-
-  background-color: ${p => getBackground(p)};
+  > ${Alert} {
+    width: 100%;
+  }
 
   @media (${p => p.theme.screens.phoneOnly}) {
-    bottom: 0;
-    left: 0;
-    right: 0;
-
-    min-height: 80px;
+    bottom: 2rem;
+    left: 1.5rem;
+    right: 1.5rem;
   }
-
-  @media (${p => p.theme.screens.smallDesktop}) {
-    bottom: 80px;
-    left: 50%;
-
-    width: 400px;
-    margin-left: -180px;
-
-    box-shadow: ${p => p.theme.liftedMore};
-  }
-`
-
-const IconWrapper = styled.div`
-  position: absolute;
-  left: 0;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  width: 80px;
-  height: 100%;
-  border-radius: 2px 0 0 2px;
-  padding: 0 1rem;
-`
-
-const Content = styled.div`
-  display: flex;
-  align-items: center;
-
-  width: 100%;
-  padding: 1rem;
 `
 
 class SnackbarRoot extends Component {
   private handleClickOut = () => this.props.isVisible && hide()
 
   public render() {
+    const { isVisible, message, options } = this.props
+
     return (
       <Transition
         unmountOnExit
-        in={this.props.isVisible}
+        in={isVisible}
         timeout={{ enter: 0, exit: duration }}
       >
         {state => (
           <Portal>
             <ClickOutHandler
-              enabled={this.props.isVisible}
-              refProp='innerRef'
+              enabled={isVisible}
               onClickOut={this.handleClickOut}
             >
-              <Snackbar
+              <Wrapper
                 role='alert'
                 style={{ ...defaultStyle, ...transitionStyles[state] }}
-                type={this.props.type}
               >
-                <Icon name={ICONS[this.props.type]} />
-                {this.props.message}
-              </Snackbar>
+                <Alert {...options}>
+                  {options.icon &&
+                    <Icon fixedWidth name={options.icon} />
+                  }
+                  {message}
+                </Alert>
+              </Wrapper>
             </ClickOutHandler>
           </Portal>
         )}
@@ -135,5 +88,5 @@ class SnackbarRoot extends Component {
 export default withState(state => ({
   isVisible: selectIfVisible(state),
   message: selectMessage(state),
-  type: selectType(state)
+  options: selectOptions(state)
 }))(SnackbarRoot)
