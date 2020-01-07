@@ -1,20 +1,20 @@
 import { ApolloProvider } from '@apollo/client'
 import React from 'react'
 import { hot } from 'react-hot-loader/root'
+import { ModalProvider } from 'react-modal-hook'
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 import { ThemeProvider } from 'styled-components'
 
 import GlobalStyle from '@/components/GlobalStyle'
 
 import LanguageDetector from '@/widgets/LanguageDetector'
-import ModalRoot from '@/widgets/ModalRoot'
 import SnackbarRoot from '@/widgets/SnackbarRoot'
 
-import theme from '@/theme'
+import { StateProvider } from '@/state'
 
 import client from '@/util/apollo'
 
-import { StateProvider } from '@/state'
+import theme from '@/theme'
 
 const App = () => (
   <ApolloProvider client={client}>
@@ -23,11 +23,14 @@ const App = () => (
         <GlobalStyle />
         <SnackbarRoot />
         <Router>
-          <LanguageDetector />
-          <ModalRoot />
-          <Switch>
-            <Route path='/' render={() => 'Hello world!'} />
-          </Switch>
+          <ModalProvider>
+            <LanguageDetector />
+            <Switch>
+              <Route path='/'>
+                Hello world!
+              </Route>
+            </Switch>
+          </ModalProvider>
         </Router>
       </StateProvider>
     </ThemeProvider>
