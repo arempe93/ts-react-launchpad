@@ -1,14 +1,14 @@
 import styled, { css } from 'styled-components'
 
 const borderedStyles = css`
-  border-bottom: 1px solid ${p => p.theme.black4};
+  border-bottom: 1px solid ${p => p.theme.grey200};
 `
 
 const Card = styled.div`
   width: 100%;
 
   background-color: white;
-  border: 1px solid ${p => p.theme.black8};
+  border: 1px solid ${p => p.theme.grey200};
   border-radius: 0.375rem;
   box-shadow: ${p => p.theme.shadows.cardShadow};
 `
@@ -20,8 +20,18 @@ export const Body = styled.div`
 
   background-color: ${p => p.theme[p.bgColor]};
 
+  &:first-child {
+    border-top-left-radius: 0.375rem;
+    border-top-right-radius: 0.375rem;
+  }
+
   &:last-child {
-    border-radius: 0 0 0.375rem 0.375rem;
+    border-bottom-left-radius: 0.375rem;
+    border-bottom-right-radius: 0.375rem;
+  }
+
+  & + & {
+    border-top: 1px solid ${p => p.theme.grey100};
   }
 `
 
@@ -30,16 +40,27 @@ Body.defaultProps = {
 }
 
 export const Header = styled.div`
-  padding: 1.25rem 1.5rem;
+  align-items: flex-start;
+  display: flex;
+  justify-content: space-between;
+  padding: 1.5rem 1.5rem 0.5rem;
 
   background-color: white;
-  border-radius: 0.375rem 0.375rem 0 0;
 
-  ${p => !p.unbordered && borderedStyles};
+  &:first-child {
+    border-top-left-radius: 0.375rem;
+    border-top-right-radius: 0.375rem;
+  }
+
+  ${Body} + & {
+    border-top: 1px solid ${p => p.theme.grey200};
+  }
+
+  ${p => p.bordered && borderedStyles};
 `
 
 Header.defaultProps = {
-  unbordered: false
+  bordered: false
 }
 
 export default Card

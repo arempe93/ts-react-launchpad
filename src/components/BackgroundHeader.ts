@@ -1,24 +1,24 @@
 import styled from 'styled-components'
 
 const BackgroundHeader = styled.header`
-  align-items: center;
-  display: flex;
-  padding: 8rem 0 8rem;
+  padding: ${p => p.top}rem 0 ${p => p.bottom}rem;
 
-  position: relative;
-
-  background-color: ${p => p.theme[p.bgColor]};
-
-  z-index: -20;
+  background: linear-gradient(65deg, ${p => p.theme[p.bgDarkColor]}, ${p => p.theme[p.bgLightColor]});
 
   & + * {
-    margin-top: -6rem;
+    margin-top: -${p => p.bottom - p.buffer}rem;
+
+    z-index: 2;
   }
 `
 
 BackgroundHeader.defaultProps = {
-  bgColor: 'primary600',
-  minHeight: 30
+  bgDarkColor: 'primary700',
+  bgLightColor: 'primary600',
+  bottom: 10,
+  buffer: 2,
+  minHeight: 30,
+  top: 6
 }
 
 export default BackgroundHeader

@@ -1,15 +1,17 @@
 import styled from 'styled-components'
 
 import Footer from '@/components/Footer'
+import Layout from '@/components/Layout'
 
-const SidebarLayout = styled.main`
-  flex: 1;
-  margin-left: ${p => p.theme.sizes.sidebarWidth}rem;
+const SidebarLayout = styled(Layout)`
+  margin-top: ${p => p.theme.sizes.navbarHeight}rem;
 
-  position: relative;
-
-  & + ${Footer} {
+  @media (${p => p.theme.screens.smallDesktop}) {
     margin-left: ${p => p.theme.sizes.sidebarWidth}rem;
+
+    & + ${Footer} {
+      margin-left: ${p => p.theme.sizes.sidebarWidth}rem;
+    }
   }
 `
 

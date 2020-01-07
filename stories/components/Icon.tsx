@@ -2,7 +2,7 @@ import React from 'react'
 
 import { storiesOf } from '@storybook/react'
 
-import ActionRow from '@/components/ActionRow'
+import Flex from '@/components/Flex'
 import Icon from '@/components/Icon'
 import Text from '@/components/Text'
 
@@ -11,7 +11,7 @@ import Padding from '../Padding'
 storiesOf('components/Icon', module)
   .add('default', () => (
     <Padding>
-      <ActionRow gutter={3}>
+      <Flex gutter={3}>
         <Text size={2}>
           <Icon name='adjust' />
         </Text>
@@ -30,6 +30,6 @@ storiesOf('components/Icon', module)
         <Text color='grey500' size={2}>
           <Icon name='closed-captioning' prefix='far' />
         </Text>
-      </ActionRow>
+      </Flex>
     </Padding>
   ))

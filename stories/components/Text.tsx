@@ -2,7 +2,7 @@ import React from 'react'
 
 import { storiesOf } from '@storybook/react'
 
-import ActionRow from '@/components/ActionRow'
+import Flex from '@/components/Flex'
 import Text from '@/components/Text'
 
 import Padding from '../Padding'
@@ -10,7 +10,7 @@ import Padding from '../Padding'
 storiesOf('components/Text', module)
   .add('default', () => (
     <Padding>
-      <ActionRow align='flex-start' direction='column'>
+      <Flex align='flex-start' direction='column'>
         <Text
           as='h1'
           size={2}
@@ -40,6 +40,6 @@ storiesOf('components/Text', module)
         >
           Lorem ipsum dolor sit amet
         </Text>
-      </ActionRow>
+      </Flex>
     </Padding>
   ))

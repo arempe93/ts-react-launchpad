@@ -2,7 +2,7 @@ import React from 'react'
 
 import { storiesOf } from '@storybook/react'
 
-import ActionRow from '@/components/ActionRow'
+import Flex from '@/components/Flex'
 import Icon from '@/components/Icon'
 import Label from '@/components/Label'
 
@@ -11,7 +11,7 @@ import Center from '../Center'
 storiesOf('components/Label', module)
   .add('default', () => (
     <Center>
-      <ActionRow>
+      <Flex>
         <Label>
           Primary
         </Label>
@@ -24,12 +24,12 @@ storiesOf('components/Label', module)
         <Label bgColor='danger500'>
           Danger
         </Label>
-      </ActionRow>
+      </Flex>
     </Center>
   ))
   .add('with icon', () => (
     <Center>
-      <ActionRow>
+      <Flex>
         <Label>
           <Icon name='adjust' />
           Primary
@@ -46,12 +46,12 @@ storiesOf('components/Label', module)
           <Icon name='radiation-alt' />
           Danger
         </Label>
-      </ActionRow>
+      </Flex>
     </Center>
   ))
   .add('alternate colors', () => (
     <Center>
-      <ActionRow>
+      <Flex>
         <Label bgColor='primary200' color='primary800'>
           Primary
         </Label>
@@ -64,6 +64,6 @@ storiesOf('components/Label', module)
         <Label bgColor='danger200' color='danger800'>
           Danger
         </Label>
-      </ActionRow>
+      </Flex>
     </Center>
   ))

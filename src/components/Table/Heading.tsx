@@ -7,8 +7,6 @@ const Heading = styled(Cell).attrs({
 })`
   padding: 0.5rem 1rem;
 
-  border: none;
-  border-bottom: 1px solid ${p => p.theme.black4};
   color: ${p => p.theme.grey600};
 
   font-size: 0.75rem;

@@ -5,15 +5,15 @@ import Link from '@/components/Link'
 
 const SubtleLink = styled(Link)`
   text-decoration: none;
-
-  &:hover {
-    text-decoration: underline;
-  }
 `
 
 SubtleLink.defaultProps = {
   as: _Link,
-  hoverColor: undefined
+  color: 'grey700',
+  lineHeight: 1.15,
+  size: 1,
+  uppercase: false,
+  weight: 400
 }
 
 export default SubtleLink

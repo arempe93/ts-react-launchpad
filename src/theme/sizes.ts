@@ -1,6 +1,6 @@
 export const borderRadius = 0.25
 
-export const navbarHeight = 5
+export const navbarHeight = 4
 
 export const sidebarWidth = 16
 

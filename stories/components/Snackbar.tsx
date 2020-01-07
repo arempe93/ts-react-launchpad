@@ -2,7 +2,7 @@ import React from 'react'
 
 import { storiesOf } from '@storybook/react'
 
-import ActionRow from '@/components/ActionRow'
+import Flex from '@/components/Flex'
 import Icon from '@/components/Icon'
 import Snackbar from '@/components/Snackbar'
 
@@ -11,7 +11,7 @@ import Padding from '../Padding'
 storiesOf('components/Snackbar', module)
   .add('default', () => (
     <Padding>
-      <ActionRow align='flex-start' direction='column' gutter={2}>
+      <Flex align='flex-start' direction='column' gutter={2}>
         <Snackbar>
           Important application message
         </Snackbar>
@@ -24,12 +24,12 @@ storiesOf('components/Snackbar', module)
         <Snackbar bgColor='danger500'>
           Uh oh, you messed this one up good
         </Snackbar>
-      </ActionRow>
+      </Flex>
     </Padding>
   ))
   .add('with icon', () => (
     <Padding>
-      <ActionRow align='flex-start' direction='column' gutter={2}>
+      <Flex align='flex-start' direction='column' gutter={2}>
         <Snackbar>
           <Icon name='adjust' />
           Important application message
@@ -46,12 +46,12 @@ storiesOf('components/Snackbar', module)
           <Icon name='radiation-alt' />
           Uh oh, you messed this one up good
         </Snackbar>
-      </ActionRow>
+      </Flex>
     </Padding>
   ))
   .add('alternate colors', () => (
     <Padding>
-      <ActionRow align='flex-start' direction='column' gutter={2}>
+      <Flex align='flex-start' direction='column' gutter={2}>
         <Snackbar bgColor='primary200' color='primary900'>
           Important application message
         </Snackbar>
@@ -64,6 +64,6 @@ storiesOf('components/Snackbar', module)
         <Snackbar bgColor='danger200' color='danger900'>
           Uh oh, you messed this one up good
         </Snackbar>
-      </ActionRow>
+      </Flex>
     </Padding>
   ))

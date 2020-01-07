@@ -2,8 +2,8 @@ import React from 'react'
 
 import { storiesOf } from '@storybook/react'
 
-import ActionRow from '@/components/ActionRow'
 import Button from '@/components/Button'
+import Flex from '@/components/Flex'
 import Icon from '@/components/Icon'
 
 import Center from '../Center'
@@ -12,7 +12,7 @@ import Padding from '../Padding'
 storiesOf('components/Button', module)
   .add('default', () => (
     <Padding>
-      <ActionRow>
+      <Flex>
         <Button>
           Testing
         </Button>
@@ -35,12 +35,12 @@ storiesOf('components/Button', module)
         >
           Something
         </Button>
-      </ActionRow>
+      </Flex>
     </Padding>
   ))
   .add('disabled', () => (
     <Padding>
-      <ActionRow>
+      <Flex>
         <Button disabled>
           Testing
         </Button>
@@ -63,12 +63,12 @@ storiesOf('components/Button', module)
         >
           Something
         </Button>
-      </ActionRow>
+      </Flex>
     </Padding>
   ))
   .add('small', () => (
     <Padding>
-      <ActionRow>
+      <Flex>
         <Button small>
           Testing
         </Button>
@@ -94,12 +94,12 @@ storiesOf('components/Button', module)
         >
           Something
         </Button>
-      </ActionRow>
+      </Flex>
     </Padding>
   ))
   .add('block', () => (
     <Center>
-      <ActionRow direction='column'>
+      <Flex direction='column'>
         <Button block>
           Testing
         </Button>
@@ -125,12 +125,12 @@ storiesOf('components/Button', module)
         >
           Something
         </Button>
-      </ActionRow>
+      </Flex>
     </Center>
   ))
   .add('with icon', () => (
     <Padding>
-      <ActionRow>
+      <Flex>
         <Button>
           <Icon name='arrow-alt-circle-down' />
           Testing
@@ -157,6 +157,6 @@ storiesOf('components/Button', module)
           <Icon name='exclamation-triangle' />
           Something
         </Button>
-      </ActionRow>
+      </Flex>
     </Padding>
   ))

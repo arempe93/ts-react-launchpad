@@ -3,11 +3,11 @@ import styled from 'styled-components'
 
 import { storiesOf } from '@storybook/react'
 
-import ActionRow from '@/components/ActionRow'
 import Anchor from '@/components/Anchor'
 import BackgroundHeader from '@/components/BackgroundHeader'
 import Button from '@/components/Button'
 import Card, { Body, Header } from '@/components/Card'
+import Flex from '@/components/Flex'
 import FormGroup, { Label } from '@/components/FormGroup'
 import Input from '@/components/Input'
 import Text from '@/components/Text'
@@ -30,11 +30,11 @@ storiesOf('components/BackgroundHeader', module)
       <BackgroundHeader>
         <Content>
           <HeadingText>
-            <ActionRow full justify='center'>
+            <Flex full justify='center'>
               <Text color='white' size={2} weight={700}>
                 Go ahead, log in
               </Text>
-            </ActionRow>
+            </Flex>
           </HeadingText>
         </Content>
       </BackgroundHeader>
@@ -42,11 +42,11 @@ storiesOf('components/BackgroundHeader', module)
         <Card>
           <LoginBody bgColor='grey25'>
             <FormGroup>
-              <ActionRow justify='center'>
+              <Flex justify='center'>
                 <Text color='grey600' size={0.875}>
                   Sign in to your account
                 </Text>
-              </ActionRow>
+              </Flex>
             </FormGroup>
             <FormGroup>
               <Label>
@@ -73,7 +73,7 @@ storiesOf('components/BackgroundHeader', module)
                 Sign in
               </Button>
             </FormGroup>
-            <ActionRow justify='center'>
+            <Flex justify='center'>
               <Anchor
                 href='https://google.com'
                 size={0.875}
@@ -81,7 +81,7 @@ storiesOf('components/BackgroundHeader', module)
               >
                 Create a new account
               </Anchor>
-            </ActionRow>
+            </Flex>
           </LoginBody>
         </Card>
       </Content>

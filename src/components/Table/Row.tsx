@@ -1,7 +1,5 @@
 import styled, { css } from 'styled-components'
 
-import Cell from './Cell'
-
 const activeStyles = css`
   background-color: ${p => p.theme.catskillWhite50};
 `
@@ -10,11 +8,7 @@ const clickableStyles = css`
   cursor: pointer;
 
   &:hover {
-    background-color: ${p => p.active ? p.theme.primary100 : p.theme.grey100};
-
-    ${Cell} {
-      border-top-color: transparent;
-    }
+    background-color: ${p => p.active ? p.theme.primary100 : p.theme.grey25};
   }
 `
 
@@ -30,13 +24,7 @@ const Row = styled.tr`
 
   @media (${p => p.theme.screens.phoneOnly}) {
     &:not(:last-child) {
-      border-bottom: 2px solid ${p => p.theme.black2};
-    }
-  }
-
-  &:first-child {
-    ${Cell} {
-      border-color: transparent;
+      border-bottom: 2px solid ${p => p.theme.grey200};
     }
   }
 `
